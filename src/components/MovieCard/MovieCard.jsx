@@ -89,9 +89,9 @@ const MovieCard = ({ movie }) => {
 
 MovieCard.propTypes = {
   movie: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    release_date: PropTypes.string.isRequired,
-    poster_path: PropTypes.string.isRequired,
+    title: PropTypes.string,
+    release_date: PropTypes.string,
+    poster_path: PropTypes.string,
     vote_average: PropTypes.number,
     overview: PropTypes.string,
     genres: PropTypes.arrayOf(

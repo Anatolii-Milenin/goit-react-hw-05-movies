@@ -29,7 +29,7 @@ MovieList.propTypes = {
   trendingMovies: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
+      title: PropTypes.string,
       release_date: PropTypes.string.isRequired,
       overview: PropTypes.string.isRequired,
       poster_path: PropTypes.string,
