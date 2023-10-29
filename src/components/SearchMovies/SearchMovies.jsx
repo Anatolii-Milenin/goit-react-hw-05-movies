@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import { toast } from 'react-hot-toast';
 import { Button, Form, Input } from './SearchMovies.styled';
+import React, { useState } from 'react';
 
 const SearchMovies = ({ onSubmit }) => {
+  const [query, setQuery] = useState('');
+
   const handleSubmit = e => {
     e.preventDefault();
-
-    const query = e.target.elements.query.value;
 
     if (!query) {
       toast.error('Please enter something');
@@ -14,17 +15,25 @@ const SearchMovies = ({ onSubmit }) => {
     }
 
     onSubmit(query);
-    e.target.reset();
+    setQuery('');
   };
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Input name="query" type="text" placeholder="Search movies" />
+      <Input
+        name="query"
+        type="text"
+        placeholder="Search movies"
+        value={query}
+        onChange={e => setQuery(e.target.value)}
+      />
       <Button type="submit">Search</Button>
     </Form>
   );
 };
 
-SearchMovies.propTypes = { onSubmit: PropTypes.func.isRequired };
+SearchMovies.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
 
 export default SearchMovies;

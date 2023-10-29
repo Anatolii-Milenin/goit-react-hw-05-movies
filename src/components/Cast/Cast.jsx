@@ -33,23 +33,23 @@ const Cast = () => {
       <CastHeader>Cast</CastHeader>
       {cast.length ? (
         <CastList>
-          {cast.map(actor => (
-            <CastListItem className="cast-card" key={actor.id}>
-              {actor.profile_path ? (
+          {cast.map(({ id, name, profile_path, character }) => (
+            <CastListItem className="cast-card" key={id}>
+              {profile_path ? (
                 <img
-                  src={`https://image.tmdb.org/t/p/w200${actor.profile_path}`}
-                  alt={`${actor.name} profile`}
+                  src={`https://image.tmdb.org/t/p/w200${profile_path}`}
+                  alt={`${name} profile`}
                 />
               ) : (
                 <img
                   src={`https://via.placeholder.com/200x300?text=No+Image`}
-                  alt={`${actor.name} profile`}
+                  alt={`${name} profile`}
                 />
               )}
 
               <CastInfo>
-                <CastName>{actor.name}</CastName>
-                <p>Character: {actor.character}</p>
+                <CastName>{name}</CastName>
+                <p>Character: {character}</p>
               </CastInfo>
             </CastListItem>
           ))}

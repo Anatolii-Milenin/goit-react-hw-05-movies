@@ -4,7 +4,6 @@ export const Form = styled.form`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
   margin-bottom: 20px;
 `;
 
@@ -17,7 +16,6 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  background-color: #b5d1f2;
   border: 1px solid #0d57aa;
   border-radius: 4px;
   padding: 8px 18px;
@@ -27,7 +25,7 @@ export const Button = styled.button`
 
   &:hover,
   &:focus {
-    background-color: #0d57aa;
+    background-color: #1c85ff;
     color: #ffffff;
   }
 `;

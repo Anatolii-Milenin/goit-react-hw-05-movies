@@ -31,7 +31,6 @@ const Reviews = () => {
   return (
     <Wrapper>
       <ReviewHeader>Reviews</ReviewHeader>
-
       {reviews.length ? (
         <ReviewList className="reviews-container">
           {reviews.map(review => (

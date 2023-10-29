@@ -25,8 +25,6 @@ const MovieList = ({ trendingMovies }) => {
   );
 };
 
-export default MovieList;
-
 MovieList.propTypes = {
   trendingMovies: PropTypes.arrayOf(
     PropTypes.shape({
@@ -39,3 +37,5 @@ MovieList.propTypes = {
     })
   ).isRequired,
 };
+
+export default MovieList;

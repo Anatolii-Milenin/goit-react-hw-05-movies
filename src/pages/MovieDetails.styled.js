@@ -10,12 +10,11 @@ export const Button = styled.button`
   font-size: 14px;
   border: 1px solid #0d57aa;
   border-radius: 6px;
-  background-color: #b5d1f2;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 
   &:hover,
   &:focus {
-    background-color: #0d57aa;
+    background-color: #1c85ff;
     color: #ffffff;
   }
 `;

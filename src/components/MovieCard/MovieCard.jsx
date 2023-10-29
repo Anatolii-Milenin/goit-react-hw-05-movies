@@ -33,7 +33,7 @@ const MovieCard = ({ movie }) => {
     ? `${(vote_average * 10).toFixed(0)}%`
     : 'Not rated yet';
 
-  if (!title) {
+  if (!movie || !movie.title) {
     return <LoadingIndicator />;
   }
 
@@ -50,6 +50,7 @@ const MovieCard = ({ movie }) => {
           <MovieInfoText>
             <MovieInfoTextBold>Overview:</MovieInfoTextBold> {overview}
           </MovieInfoText>
+
           {genres && genres.length > 0 && (
             <MovieInfoText>
               <MovieInfoTextBold>Genres:</MovieInfoTextBold>

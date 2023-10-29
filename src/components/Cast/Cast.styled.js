@@ -32,6 +32,8 @@ export const CastInfo = styled.div`
   max-width: 220px;
 `;
 
+export const CastImage = styled.img``;
+
 export const CastName = styled.h3`
   margin-bottom: 10px;
 `;
@@ -42,6 +44,5 @@ export const NoCastText = styled.p`
   padding: 20px;
   background-color: #f8f8f8;
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   max-width: 500px;
 `;
